@@ -1,0 +1,37 @@
+{
+	"version": 1,
+	"parameters": [
+		{
+			"id": "KxE49yccNHWnA1qB",
+			"name": "raise if fails",
+			"description": "Whether to raise an error in case of failure or continue. true means raise",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "true",
+			"extra_data": [
+				"true",
+				"false"
+			]
+		},
+		{
+			"id": "OEbobXUVqkjvNy79",
+			"name": "skip motion correction",
+			"description": "Whether to skip Lupin motion correction.",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "false",
+			"extra_data": [
+				"false",
+				"true"
+			]
+		},
+		{
+			"id": "EOM9IxiZdQMmAfTJ",
+			"name": "min channels for drift",
+			"description": "Minimum number of channels to enable SC2 motion correction.",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "64"
+		}
+	]
+}

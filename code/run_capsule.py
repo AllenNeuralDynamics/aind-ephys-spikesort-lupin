@@ -90,13 +90,11 @@ if __name__ == "__main__":
         SKIP_MOTION_CORRECTION = spikesorting_params.pop("skip_motion_correction", False)
         MIN_DRIFT_CHANNELS = spikesorting_params.pop("min_drift_channels", 96)
         RAISE_IF_FAILS = spikesorting_params.pop("raise_if_fails", True)
-        CLEAR_CACHE = spikesorting_params.pop("clear_cache", False)
     else:
         SKIP_MOTION_CORRECTION = True if args.static_skip_motion_correction and args.static_skip_motion_correction.lower() == "true" else args.skip_motion_correction
         MIN_DRIFT_CHANNELS = args.static_min_channels_for_drift or args.min_drift_channels
         MIN_DRIFT_CHANNELS = int(MIN_DRIFT_CHANNELS)
         RAISE_IF_FAILS = True if args.static_raise_if_fails and args.static_raise_if_fails.lower() == "true" else args.raise_if_fails
-        CLEAR_CACHE = True if args.static_clear_cache and args.static_clear_cache.lower() == "true" else args.clear_cache
 
         # read default parameters from JSON file
         default_params_file = Path(__file__).parent / "params.json"
