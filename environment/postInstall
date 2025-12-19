@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-git clone https://github.com/samuelgarcia/spikeinterface.git
+git clone https://github.com/SpikeInterface/spikeinterface.git
 cd spikeinterface
-git checkout 69b8c9b5587af475fd317f2b5bd615973924e206
+git checkout 1cb3e7d6b702457ab94ee459b5e01405628f06bf
 pip install .
 cd ..
