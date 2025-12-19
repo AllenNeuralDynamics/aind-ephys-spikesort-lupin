@@ -4,7 +4,7 @@
         "progress_bar": false
     },
     "sorter": {
-        "apply_preprocessing": true,
+        "apply_preprocessing": false,
         "apply_motion_correction": false,
         "motion_correction_preset": "dredge_fast",
         "clustering_ms_before": 0.3,
