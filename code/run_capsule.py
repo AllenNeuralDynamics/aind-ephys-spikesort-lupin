@@ -56,10 +56,10 @@ skip_motion_correction_group.add_argument("static_skip_motion_correction", nargs
 
 min_drift_channels_group = parser.add_mutually_exclusive_group()
 min_drift_channels_help = (
-    "Minimum number of channels to enable Lupin motion correction. Default is 96."
+    "Minimum number of channels to enable Lupin motion correction. Default is 64."
 )
 min_drift_channels_group.add_argument("static_min_channels_for_drift", nargs="?", help=min_drift_channels_help)
-min_drift_channels_group.add_argument("--min-drift-channels", default="96", help=min_drift_channels_help)
+min_drift_channels_group.add_argument("--min-drift-channels", default="64", help=min_drift_channels_help)
 
 n_jobs_group = parser.add_mutually_exclusive_group()
 n_jobs_help = (
@@ -202,12 +202,12 @@ if __name__ == "__main__":
 
         if recording.get_num_channels() < MIN_DRIFT_CHANNELS:
             logging.info("Drift correction not enabled due to low number of channels")
-            sorter_params["do_correction"] = False
+            sorter_params["apply_motion_correction"] = False
+
 
         if SKIP_MOTION_CORRECTION:
             logging.info("Drift correction disabled")
-            sorter_params["do_correction"] = False
-
+            sorter_params["apply_motion_correction"] = False
 
         # run lupin
         try:
