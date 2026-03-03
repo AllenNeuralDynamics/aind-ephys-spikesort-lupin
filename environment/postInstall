@@ -3,6 +3,6 @@ set -e
 
 git clone https://github.com/SpikeInterface/spikeinterface.git
 cd spikeinterface
-git checkout 1cb3e7d6b702457ab94ee459b5e01405628f06bf
+git checkout 4ce1622322a02cdc81383d7573b03408ac4116f2
 pip install .
 cd ..
